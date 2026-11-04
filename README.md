@@ -1,6 +1,6 @@
 # Evaluación de competencias en Excel
 
-Sitio estático listo para Vercel. Conserva la estructura de la prueba original: datos del candidato, 30 preguntas en tres niveles y reporte de resultados. No incluye marcas externas.
+Sitio estático listo para Vercel. Conserva la estructura de la prueba original: datos del candidato, 30 preguntas en tres niveles, límite de 60 minutos con cuenta regresiva y reporte de resultados. No incluye marcas externas.
 
 ## Publicar en Vercel
 

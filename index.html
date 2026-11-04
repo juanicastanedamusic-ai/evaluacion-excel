@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#143d32">
   <meta name="description" content="Evaluación interactiva de competencias en Microsoft Excel: 30 preguntas, tres niveles y un reporte de resultados.">
   <title>Evaluación de competencias en Excel</title>
-  <link rel="stylesheet" href="styles.css?v=8">
-  <script src="script.js?v=8" defer></script>
+  <link rel="stylesheet" href="styles.css?v=9">
+  <script src="script.js?v=9" defer></script>
 </head>
 <body>
   <div class="page-glow" aria-hidden="true"></div>
@@ -31,7 +31,7 @@
             <i></i>
             <div><strong>3</strong><span>niveles</span></div>
             <i></i>
-            <div><strong>30–40</strong><span>minutos</span></div>
+            <div><strong>60</strong><span>minutos</span></div>
           </div>
         </div>
         <div class="hero-art" aria-hidden="true">
@@ -73,7 +73,8 @@
             <li><span>01</span><p>Responde <strong>una pregunta a la vez</strong> y avanza a tu ritmo.</p></li>
             <li><span>02</span><p>Explora <strong>tablas, fórmulas y gráficos</strong> en contextos reales.</p></li>
             <li><span>03</span><p>Muévete entre preguntas ya visitadas y <strong>ajusta tus respuestas</strong>.</p></li>
-            <li><span>04</span><p>Recibe un <strong>reporte por nivel</strong> con recomendaciones al terminar.</p></li>
+            <li><span>04</span><p>Tienes <strong>60 minutos</strong>. Al llegar a cero, la evaluación se cierra y las preguntas sin responder cuentan como por mejorar.</p></li>
+            <li><span>05</span><p>Recibe un <strong>reporte por nivel</strong> con recomendaciones al terminar.</p></li>
           </ol>
           <div class="levels"><span>01 Básico</span><span>02 Intermedio</span><span>03 Avanzado</span></div>
         </aside>
@@ -82,8 +83,8 @@
 
     <section id="exam" class="view" aria-label="Preguntas de la evaluación" hidden>
       <div class="exam-head">
-        <div><span class="kicker">EVALUACIÓN EN CURSO</span><h1>Demuestra lo que sabes.</h1><p>Lee con calma. Puedes volver a las preguntas anteriores.</p></div>
-        <div class="exam-timer" aria-label="Tiempo transcurrido"><span>◷</span><strong id="timer">00:00</strong><small>transcurrido</small></div>
+        <div><span class="kicker">EVALUACIÓN EN CURSO</span><h1>Demuestra lo que sabes.</h1><p>Tienes 60 minutos. Puedes volver a las preguntas anteriores.</p></div>
+        <div class="exam-timer" role="timer" aria-label="Tiempo restante"><span>◷</span><strong id="timer">60:00</strong><small>restante</small></div>
       </div>
       <div class="exam-layout">
         <aside class="exam-sidebar">
