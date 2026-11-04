@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143d32">
+  <meta name="description" content="Evaluación interactiva de competencias en Microsoft Excel: 30 preguntas, tres niveles y un reporte de resultados.">
+  <title>Evaluación de competencias en Excel</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="page-glow" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="identity" href="./" aria-label="Inicio de evaluación">
+      <span class="identity-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
+      <span><strong>Evaluación Excel</strong><small>Competencias digitales</small></span>
+    </a>
+    <span class="topbar-pill"><span class="live-dot"></span> Evaluación interactiva</span>
+  </header>
+
+  <main id="app" class="shell">
+    <section id="intro" class="view" aria-labelledby="intro-title">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-line"></span> HABILIDADES QUE SE DEMUESTRAN</div>
+          <h1 id="intro-title">Tu dominio de Excel,<br><em>en perspectiva.</em></h1>
+          <p class="hero-sub">Una evaluación práctica para conocer tus fortalezas, identificar oportunidades y seguir creciendo.</p>
+          <div class="hero-stats" aria-label="Resumen de la prueba">
+            <div><strong>30</strong><span>preguntas</span></div>
+            <i></i>
+            <div><strong>3</strong><span>niveles</span></div>
+            <i></i>
+            <div><strong>30–40</strong><span>minutos</span></div>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-sheet">
+            <div class="sheet-head"><span class="sheet-icon">X</span><span>Vista de análisis</span><span class="sheet-dots">•••</span></div>
+            <div class="sheet-cols"><span></span><span>A</span><span>B</span><span>C</span><span>D</span></div>
+            <div class="sheet-row"><span>1</span><b>Mes</b><b>Ventas</b><b>Meta</b><b>Estado</b></div>
+            <div class="sheet-row"><span>2</span><span>Ene</span><span>84</span><span>80</span><span class="sheet-ok">✓</span></div>
+            <div class="sheet-row"><span>3</span><span>Feb</span><span>92</span><span>90</span><span class="sheet-ok">✓</span></div>
+            <div class="sheet-row"><span>4</span><span>Mar</span><span>76</span><span>85</span><span>—</span></div>
+            <div class="sheet-row"><span>5</span><span>Abr</span><span class="sheet-focus">108</span><span>95</span><span class="sheet-ok">✓</span></div>
+            <div class="sheet-bottom"><span>RESUMEN</span><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i></span></div>
+          </div>
+          <span class="art-float float-one">fx <b>=SI(…)</b></span>
+          <span class="art-float float-two">✦ Datos en acción</span>
+        </div>
+      </div>
+
+      <div class="intro-grid">
+        <form id="candidate-form" class="card form-card" novalidate>
+          <div class="section-title"><div><span class="kicker">PASO 01 / 02</span><h2>Antes de comenzar</h2><p>Completa tus datos para personalizar el reporte final.</p></div><span class="section-glyph" aria-hidden="true">↗</span></div>
+          <div class="fields">
+            <label>Nombre completo <span>*</span><input name="nombre" autocomplete="name" placeholder="Tu nombre y apellido" required></label>
+            <label>Número de cédula <span>*</span><input name="cedula" inputmode="numeric" autocomplete="off" placeholder="Número de identificación" required></label>
+            <label>Correo electrónico <span>*</span><input name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required></label>
+            <label>Número de celular <span>*</span><input name="celular" type="tel" autocomplete="tel" placeholder="Tu número de contacto" required></label>
+            <label>Cargo al que aplica <span>*</span><input name="cargo" placeholder="Cargo o rol" required></label>
+            <label>Fecha <span>*</span><input name="fecha" type="date" required></label>
+          </div>
+          <p id="form-error" class="form-error" role="alert" hidden>Completa los campos obligatorios y revisa el correo electrónico.</p>
+          <button class="button button-primary start-button" type="submit"><span>Comenzar evaluación</span><span aria-hidden="true">↗</span></button>
+          <p class="privacy-note">Tus respuestas se procesan en este navegador. Al cerrar la página, los datos no se guardan en un servidor.</p>
+        </form>
+        <aside class="card instructions">
+          <span class="kicker">PASO 02 / 02</span>
+          <h2>Así funciona</h2>
+          <ol>
+            <li><span>01</span><p>Responde <strong>una pregunta a la vez</strong> y avanza a tu ritmo.</p></li>
+            <li><span>02</span><p>Explora <strong>tablas, fórmulas y gráficos</strong> en contextos reales.</p></li>
+            <li><span>03</span><p>Muévete entre preguntas ya visitadas y <strong>ajusta tus respuestas</strong>.</p></li>
+            <li><span>04</span><p>Recibe un <strong>reporte por nivel</strong> con recomendaciones al terminar.</p></li>
+          </ol>
+          <div class="levels"><span>01 Básico</span><span>02 Intermedio</span><span>03 Avanzado</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="exam" class="view" aria-label="Preguntas de la evaluación" hidden>
+      <div class="exam-head">
+        <div><span class="kicker">EVALUACIÓN EN CURSO</span><h1>Demuestra lo que sabes.</h1><p>Lee con calma. Puedes volver a las preguntas anteriores.</p></div>
+        <div class="exam-timer" aria-label="Tiempo transcurrido"><span>◷</span><strong id="timer">00:00</strong><small>transcurrido</small></div>
+      </div>
+      <div class="exam-layout">
+        <aside class="exam-sidebar">
+          <div class="sidebar-card">
+            <div class="sidebar-heading"><span>Tu progreso</span><strong id="progress-count">0 / 30</strong></div>
+            <div id="progress-bar" class="progress-track" role="progressbar" aria-label="Preguntas respondidas" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0"><span></span></div>
+            <p class="sidebar-hint">Selecciona un número para revisar una pregunta visitada.</p>
+            <div id="question-map" class="question-map" aria-label="Mapa de preguntas"></div>
+            <div class="map-legend"><span><i class="legend-current"></i> Actual</span><span><i class="legend-done"></i> Respondida</span></div>
+          </div>
+          <div class="sidebar-tip"><span aria-hidden="true">✦</span><p><strong>Consejo</strong>Si una fórmula te resulta familiar, piensa primero qué datos toma y qué resultado devuelve.</p></div>
+        </aside>
+        <div class="question-column"><div id="question-host" aria-live="polite"></div></div>
+      </div>
+    </section>
+
+    <section id="results" class="view" aria-label="Resultado de la evaluación" hidden>
+      <div class="result-hero">
+        <div><span class="kicker">EVALUACIÓN COMPLETADA</span><h1>Así te fue, <span id="result-name"></span>.</h1><p id="result-subtitle"></p></div>
+        <div class="score-ring" id="score-ring"><div><strong id="result-score">0</strong><span>de 30</span></div></div>
+      </div>
+      <div class="result-grid">
+        <article class="card result-summary"><span class="kicker">TU RESULTADO</span><h2 id="result-level"></h2><p id="result-message"></p><div class="result-metrics"><div><strong id="metric-right"></strong><span>correctas</span></div><div><strong id="metric-wrong"></strong><span>por mejorar</span></div><div><strong id="metric-pct"></strong><span>desempeño</span></div></div></article>
+        <article class="card breakdown"><span class="kicker">DESEMPEÑO POR NIVEL</span><h2>Una mirada más completa</h2><div id="breakdown-bars"></div></article>
+      </div>
+      <div class="result-grid lower-grid">
+        <article class="card recommendation"><span class="kicker">PRÓXIMOS PASOS</span><h2>Tu ruta para mejorar</h2><div id="recommendations"></div></article>
+        <article class="card answer-map"><span class="kicker">RESUMEN DE RESPUESTAS</span><h2>Pregunta por pregunta</h2><div id="answer-map"></div></article>
+      </div>
+      <div class="result-actions"><button id="print-button" class="button button-primary" type="button">Imprimir o guardar PDF <span aria-hidden="true">↗</span></button><button id="restart-button" class="button button-ghost" type="button">Iniciar de nuevo</button></div>
+      <p class="result-footer" id="result-footer"></p>
+    </section>
+  </main>
+  <footer class="footer"><span>Evaluación de competencias digitales</span><span>Diseñado para aprender y avanzar <b>✳</b></span></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>
