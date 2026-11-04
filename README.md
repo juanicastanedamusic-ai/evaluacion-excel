@@ -21,3 +21,4 @@ También puedes descomprimir el ZIP y subir la carpeta resultante. El archivo `i
 - `index.html`: estructura del sitio.
 - `styles.css`: diseño adaptable a móvil y estilos de impresión.
 - `script.js`: preguntas, navegación, calificación y reporte.
+- `hero-motion.js`: animación flotante de la ilustración de portada (usa GSAP desde cdnjs).
